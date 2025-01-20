@@ -1,50 +1,41 @@
-# React + TypeScript + Vite
+# Insightly App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Insightly App** is a React-based application designed to provide users with insightful information about their daily activity and mood. The goal of the dashboard is to go beyond simple data display and deliver meaningful analysis and interactivity that helps users better understand their mood patterns and accomplishments.
 
-Currently, two official plugins are available:
+## Run Instructions
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Access the application using the following link:  
+[Insightly App](https://darling-melomakarona-a3d09b.netlify.app/)
 
-## Expanding the ESLint configuration
+## For local launch
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- clone the projest
+- run command `npm install`
+- run command `npm run dev`
+- open localhost link
 
-- Configure the top-level `parserOptions` property like this:
+## Key Features and Improvements
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+- **Component Logic Refactor**:  
+  Moved the logic of components into custom hooks to improve reusability and separation of concerns.
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+- **Global Structure for Interfaces and Enums**:  
+  Reusable or global interfaces and enums were relocated to a dedicated global folder for better organization.
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+- **Component-Specific Typings**:  
+  Types used by components are stored near the corresponding components. Naming convention used: `name.interface/enum.ts`.
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+- **Performance Optimizations**:
+
+  - Added lazy loading for modal to reduce initial load time(suspense, lazy).
+  - Implemented memoization of components to prevent unnecessary re-renders (memo(HOC), useMemo, useCallback).
+
+- **Error Handling**:  
+  Introduced an Error Boundaries to handle unexpected issues gracefully.
+
+## Technology Highlights
+
+- **Lazy Loading**: Dynamically loading components only when needed to optimize performance.
+- **Custom Hooks**: Encapsulation of component logic into reusable and testable functions.
+- **TypeScript**: Ensures robust type-checking and enhanced code maintainability.
+- **Memoization**: Used for optimizing rendering processes and improving user experience.
