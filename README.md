@@ -10,7 +10,7 @@ Access the application using the following link:
 ## For local launch
 
 - clone the project
-- run command `npm install`
+- run command `npm install --force`, due some dependencies have a conflicts related to React 18/19 version
 - run command `npm run dev`
 - open localhost link
 
