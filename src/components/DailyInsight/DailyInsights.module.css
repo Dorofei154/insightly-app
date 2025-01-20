@@ -1,0 +1,94 @@
+.container {
+  padding: 20px;
+  border-radius: 8px;
+  border: 2px solid transparent;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s,
+    box-shadow 0.3s;
+  text-align: center;
+  min-width: 300px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.container__light {
+  background-color: #f9f9f9;
+  color: #333;
+  border-color: #ddd;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.container__dark {
+  background-color: #333;
+  color: #f9f9f9;
+  border-color: #444;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.heading {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  transition: color 0.3s;
+}
+
+.heading__light {
+  color: #007bff;
+}
+
+.heading__dark {
+  color: #4db8ff;
+}
+
+.metric {
+  display: flex;
+  align-items: center;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.metric__light {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  color: #333;
+}
+
+.metric__dark {
+  background-color: #444;
+  border: 1px solid #555;
+  color: #f9f9f9;
+}
+
+.emoji {
+  font-size: 1.5rem;
+}
+
+.emoji__light {
+  color: #007bff;
+}
+
+.emoji__dark {
+  color: #4db8ff;
+}
+
+.metric__label {
+  font-size: 1rem;
+}
+
+.metric__label__light {
+  color: #555;
+}
+
+.metric__label__dark {
+  color: #ccc;
+}
+
+.metric__value {
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.metric__value__light {
+  color: #333;
+}
+
+.metric__value__dark {
+  color: #fff;
+}

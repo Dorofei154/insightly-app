@@ -1,0 +1,57 @@
+.container {
+  padding: 20px;
+  border-radius: 8px;
+  border: 2px solid transparent;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s,
+    box-shadow 0.3s;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.container__light {
+  background-color: #f9f9f9;
+  color: #333;
+  border-color: #ddd;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.container__dark {
+  background-color: #333;
+  color: #f9f9f9;
+  border-color: #444;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.heading {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+  transition: color 0.3s;
+}
+
+.heading__light {
+  color: #007bff;
+}
+
+.heading__dark {
+  color: #4db8ff;
+}
+
+.message {
+  font-size: 1rem;
+  line-height: 1.5;
+  transition: color 0.3s;
+}
+
+.message__light {
+  color: #555;
+}
+
+.message__dark {
+  color: #ccc;
+}
+@media (max-width: 768px) {
+  .container {
+    padding: 20px 10px;
+  }
+}
