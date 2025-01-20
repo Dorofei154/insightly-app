@@ -9,7 +9,7 @@ Access the application using the following link:
 
 ## For local launch
 
-- clone the projest
+- clone the project
 - run command `npm install`
 - run command `npm run dev`
 - open localhost link
